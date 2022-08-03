@@ -12,7 +12,6 @@ Set the environment variables:
 cp .env.example .env
 ```
 
-
 Set the following environment variables in your system:
 
 ```bash
@@ -42,3 +41,9 @@ node index.js
 1. Next, go to OAuth & Permissions, and find the Scopes section. Add the necessary scopes.
 
 1. After that add a slash command by going to the Slash Commands tab in the Slack API dashboard and press "Create New Command". Set the name to "docs" and the command to "/docs".
+
+Finally go to Slack and type `/docs` in the channel you want to use the bot.
+
+## Example
+
+![Algilia Slack Bot Search](https://user-images.githubusercontent.com/21223421/182685267-abd184ba-1725-4724-90b0-f926cf2c161c.gif)
