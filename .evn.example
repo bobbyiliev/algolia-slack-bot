@@ -1,3 +1,7 @@
 SLACK_BOT_TOKEN=        # Find in the Oauth  & Permissions tab
 SLACK_SIGNING_SECRET=   # Find in Basic Information Tab
 SLACK_APP_TOKEN=        # Create an App-level Token
+
+ALGOLIA_SPACE=          # Your Algolia Space
+ALGOLIA_TOKEN=          # Algolia read-only API key
+ALGOLIA_INDEX=          # Your Algolia Index

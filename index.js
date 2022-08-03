@@ -14,12 +14,12 @@ const app = new App({
 app.command("/docs", async ({ command, ack, say, client, payload }) => {
   try {
     await ack();
-    let txt = command.text; // The inputted parameters
+    let txt = command.text;
     const aClient = algoliasearch(
       process.env.ALGOLIA_SPACE,
       process.env.ALGOLIA_TOKEN,
     );
-    const index = aClient.initIndex('materialize');
+    const index = aClient.initIndex(process.env.ALGOLIA_INDEX);
 
     const results = await index.search({
       query: txt,
@@ -102,23 +102,11 @@ app.command("/docs", async ({ command, ack, say, client, payload }) => {
           }
         }
       );
-      //say(blocks);;
     }
   } catch (error) {
     console.log("err");
     console.error(error);
   }
-});
-
-app.view('selected_url', async ({ ack, view }) => {
-  // get the email value from the input block with `email_address` as the block_id
-  const email = view.state.values
-  console.log(email)
-
-  // if it’s a valid email, accept the submission
-
-  await ack();
-  say(view.state.values.value)
 });
 
 app.action('share_doc', async ({ ack, body, client, logger }) => {
