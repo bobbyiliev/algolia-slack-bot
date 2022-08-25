@@ -46,5 +46,4 @@ Finally go to Slack and type `/docs` in the channel you want to use the bot.
 
 ## Example
 
-![Algilia Slack Bot Search](https://user-images.githubusercontent.com/21223421/186690303-4f3eee81-2eb9-45a5-b190-d0003412d565.gif)
-
+![Algilia Slack Bot Search](https://user-images.githubusercontent.com/21223421/186692231-700a6e18-9aa3-4827-8d46-92ee823674b0.gif)
