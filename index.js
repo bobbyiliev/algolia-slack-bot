@@ -45,11 +45,22 @@ app.command("/docs", async ({ command, ack, say, client, payload }) => {
       ];
 
       results.hits.forEach(h => {
+        let searchResult = `*${h.hierarchy.lvl0}*`;
+        if (h.hierarchy.lvl1) {
+          searchResult += ` > ${h.hierarchy.lvl1}`;
+        }
+        if (h.hierarchy.lvl2) {
+          searchResult += ` > ${h.hierarchy.lvl2}`;
+        }
+        if (h.hierarchy.lvl3) {
+          searchResult += `\n\n_${h.hierarchy.lvl3}_`;
+        }
+        console.log(h._highlightResult.hierarchy);
         blocks.push({
           type: 'section',
           text: {
             type: 'mrkdwn',
-            text: `*${h.hierarchy.lvl0}*\n${h.url}`,
+            text: `${searchResult}\n\n${h.url}`,
           },
           // accessory: {
           //   type: 'button',
